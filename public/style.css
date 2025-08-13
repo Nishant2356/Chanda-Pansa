@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #79094a;
+  background:  linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,74,1) 35%, rgba(0,187,255,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.GreenPlayer {
+    transform: rotate(90deg);
+}
+
+.RedPlayer {
+   transform: rotate(180deg);
+}
+
+.BluePlayer {
+  transform: rotate(270deg);
+}
+
+.container {
+  width: 40vw;
+  height: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  background-color: #FFAB5B;
+  margin-top: 50px;
+  padding: 10px;
+  box-shadow: "5px 5px 10px rgba(0, 0, 0, 0.5)";
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: 15vh;
+  width: 15vh;
+  background-color: #EEF1DA;
+}
+
+.start {
+  background-color: pink;
+  font-size: xx-large;
+}
+
+.goti {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.yellow {
+  background: radial-gradient(circle at 30% 30%, #f0c400, #b58a00);
+}
+
+.green {
+  background: radial-gradient(circle at 30% 30%, #28a745, #1c7430);
+}
+
+.red {
+  background: radial-gradient(circle at 30% 30%, #d93030, #991b1b);
+}
+
+.blue {
+  background: radial-gradient(circle at 30% 30%, #2176d9, #144a8c);
+}
+
+.dice {
+  width: 70px;
+  height: 100px;
+  margin-left: 200px;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.btn {
+  width: 70px;
+  height: 70px;
+  background-color: blue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: red;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b); /* pinkish red to orange-red gradient */
+  box-shadow: 0 4px 20px rgba(255, 65, 108, 0.4);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.dicepoints {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.specialbutton {
+  height: 50px;
+  width: 50px;
+  background-color: green;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  margin-left: 70px;
+}
+
+.turnBox {
+  height: 50px;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 50px;
+  margin-left: 100px;
+}
+
+.next {
+  position: absolute;
+  top: 500px;
+  left: 1200px;
+  border: none;
+  border-radius: 50px;
+  width: 70px;
+  height: 20px;
+  background-color: rgb(33, 44, 113);
+  cursor: pointer;
+  color: white;
+}
+
+.align {
+  height: 25px;
+  width: 25px;
+}
+
+.align2 {
+  height: 15px;
+  width: 15px;
+}
+
+select {
+  width: 50px;
+  height: 20px;
+  position: relative;
+  left: 1000px;
+  bottom: 600px;
+}
+
+.special {
+  position: relative;
+}
+
+.special::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #00ffea;
+    border-right-color: #ff00f7;
+    border-bottom-color: #ffeb3b;
+    border-left-color: #4caf50;
+    animation: rotateRing 1.2s linear infinite;
+}
+
+@keyframes rotateRing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 90vw;
+    height: 90vw;
+    gap: 5px;
+    padding: 5px;
+    margin-top: 20px;
+  }
+
+  .boxes {
+    height: 17vw;
+    width: 17vw;
+    gap: 5px;
+  }
+
+  .goti {
+    width: 20px;
+    height: 20px;
+  }
+  
+  
+.align {
+  height: 15px;
+  width: 15px;
+}
+
+.align2 {
+  height: 10px;
+  width: 10px;
+}
+
+  .dice {
+    width: 60px;
+    height: 80px;
+    margin: 0px 70px 0px 70px;
+    font-size: large;
+  }
+
+  .btn {
+    width: 60px;
+    height: 60px;
+    gap: 6px;
+  }
+
+  .dicepoints {
+    width: 8px;
+    height: 8px;
+  }
+
+  .specialbutton {
+    height: 40px;
+    width: 40px;
+    margin-top: 120px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+
+  .turnBox {
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+    margin: 20px 20px 20px 55px;
+  }
+
+  .next {
+    top: 510px;
+    left: 175px;
+    /* position: static; */
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+  }
+  
+  select {
+  width: 50px;
+  height: 20px;
+  position: relative;
+  left: 175px;
+  top: 170px;
+}
+}
